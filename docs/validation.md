@@ -33,10 +33,19 @@ O ponto de entrada público é o pacote raiz:
 
 ```ts
 import {
+  apiSuccessSchema,
+  authResponseSchema,
   Room,
   RoomStatus,
   roomSchema,
 } from '@motor-vtt/contracts';
+```
+
+`apiSuccessSchema(dataSchema)` valida o envelope HTTP de sucesso e
+`apiErrorResponseSchema` valida o envelope de erro. Por exemplo:
+
+```ts
+const result = apiSuccessSchema(authResponseSchema).safeParse(responseBody);
 ```
 
 Não importe arquivos internos de `src/` ou `dist/`; eles não fazem parte da

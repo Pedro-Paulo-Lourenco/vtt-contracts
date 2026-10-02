@@ -8,11 +8,17 @@ export interface ApiError {
     code: string;
     message: string;
     correlationId?: string;
-    details?: JsonObject;
+    details?: Record<string, unknown>;
 }
 export interface ApiSuccess<T> {
+    success: true;
     data: T;
+    message?: string;
     correlationId?: string;
+}
+export interface ApiErrorResponse {
+    success: false;
+    error: ApiError;
 }
 export interface ViewPreferences {
     zoom: number;

@@ -39,9 +39,11 @@ Os valores numéricos devem ser finitos.
 
 ## Respostas e erros
 
-`ApiSuccess<T>` padroniza uma resposta bem-sucedida com `data` e um
-`correlationId` opcional. `ApiError` contém `code`, `message` e, opcionalmente,
-`correlationId` e `details`.
+`ApiSuccess<T>` padroniza uma resposta bem-sucedida com `success: true`, `data`
+e `message` e `correlationId` opcionais. `ApiError` contém `code`, `message`
+e, opcionalmente, `correlationId` e `details`. `ApiErrorResponse` envolve o erro
+com `success: false`.
 
-O `apiErrorSchema` valida erros externos ao pacote. Não há atualmente um schema
-de `ApiSuccess` exportado.
+`apiSuccessSchema(dataSchema)` valida envelopes de sucesso para qualquer
+payload. `apiErrorSchema` valida o objeto de erro e `apiErrorResponseSchema`
+valida o envelope completo de erro.

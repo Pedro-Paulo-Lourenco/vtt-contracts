@@ -5,9 +5,20 @@ export declare const userSchema: z.ZodObject<{
     nome: z.ZodString;
     email: z.ZodString;
     status: z.ZodEnum<typeof UserStatus>;
-    ultimoLogin: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    ultimoLogin: z.ZodNullable<z.ZodString>;
     createdAt: z.ZodString;
     updatedAt: z.ZodString;
 }, z.core.$strip>;
 export type UserInput = z.infer<typeof userSchema>;
+export declare const authResponseSchema: z.ZodObject<{
+    user: z.ZodObject<{
+        id: z.ZodString;
+        nome: z.ZodString;
+        email: z.ZodString;
+        status: z.ZodEnum<typeof UserStatus>;
+        ultimoLogin: z.ZodNullable<z.ZodString>;
+        createdAt: z.ZodString;
+        updatedAt: z.ZodString;
+    }, z.core.$strip>;
+}, z.core.$strip>;
 //# sourceMappingURL=user.d.ts.map

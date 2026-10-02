@@ -4,10 +4,13 @@ import { dateSchema, uuidSchema } from './common.js';
 export const userSchema = z.object({
     id: uuidSchema,
     nome: z.string().trim().min(1).max(120),
-    email: z.string().email(),
+    email: z.string().email().max(255),
     status: z.enum(UserStatus),
-    ultimoLogin: dateSchema.nullable().optional(),
+    ultimoLogin: dateSchema.nullable(),
     createdAt: dateSchema,
     updatedAt: dateSchema,
+});
+export const authResponseSchema = z.object({
+    user: userSchema,
 });
 //# sourceMappingURL=user.js.map

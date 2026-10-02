@@ -6,7 +6,7 @@ export interface User {
   nome: string;
   email: string;
   status: UserStatus;
-  ultimoLogin?: string | null;
+  ultimoLogin: string | null;
   createdAt: string;
   updatedAt: string;
 }

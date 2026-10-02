@@ -6,9 +6,9 @@
 
 - `id`: identificador UUID;
 - `nome`: nome não vazio, com até 120 caracteres;
-- `email`: endereço em formato válido;
+- `email`: endereço em formato válido, com até 255 caracteres;
 - `status`: valor de `UserStatus`;
-- `ultimoLogin`: data ISO opcional ou nula;
+- `ultimoLogin`: data ISO ou `null`;
 - `createdAt` e `updatedAt`: datas ISO válidas.
 
 O contrato não contém senha, token ou cookie de sessão.
@@ -16,8 +16,8 @@ O contrato não contém senha, token ou cookie de sessão.
 ## AuthResponse
 
 `AuthResponse` representa uma resposta de autenticação contendo o usuário em
-`user`. O pacote não implementa o fluxo de login; apenas define o formato do
-resultado que pode ser compartilhado entre aplicações.
+`user`; `authResponseSchema` valida esse formato. Tokens de sessão não fazem
+parte do contrato de resposta e devem ser transportados por cookies seguros.
 
 ## Validação
 
