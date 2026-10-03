@@ -2,6 +2,13 @@ import { z } from 'zod';
 import { ParticipantRole } from '../enums/participant-role.js';
 import { RoomStatus } from '../enums/room-status.js';
 import { dateSchema, uuidSchema, viewPreferencesSchema } from './common.js';
+export const createRoomRequestSchema = z.strictObject({
+    nome: z.string().trim().min(1).max(120),
+});
+export const joinRoomRequestSchema = z.strictObject({
+    codigoConvite: z.string().min(6).max(64),
+});
+export const roomIdSchema = uuidSchema;
 export const roomSchema = z.object({
     id: uuidSchema,
     nome: z.string().trim().min(1).max(120),

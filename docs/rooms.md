@@ -23,6 +23,35 @@ Uma `Room` identifica uma sessão de jogo:
 
 `participantSchema` valida também a estrutura de `preferenciasView`.
 
+## Requisições de sala
+
+`createRoomRequestSchema` valida somente `{ nome }` e
+`joinRoomRequestSchema` valida somente `{ codigoConvite }`. Ambos rejeitam
+campos extras: a criação não aceita identidade, papel, status ou código de
+convite fornecidos pelo cliente. O backend deve definir esses valores a partir
+do usuário autenticado e das regras da aplicação. `roomIdSchema` valida o UUID
+de um identificador de sala.
+
+`roomSchema` continua sendo o contrato do objeto completo da sala retornado
+pela API:
+
+```ts
+import {
+  createRoomRequestSchema,
+  joinRoomRequestSchema,
+  roomIdSchema,
+  roomSchema,
+} from '@motor-vtt/contracts';
+
+const createInput = createRoomRequestSchema.parse(request.body);
+const joinInput = joinRoomRequestSchema.parse(request.body);
+const roomId = roomIdSchema.parse(request.params.salaId);
+const responseRoom = roomSchema.parse(room);
+```
+
+As rotas devem converter falhas de `parse`/`safeParse` no envelope padronizado
+de erro da API.
+
 ```ts
 import { participantSchema, RoomStatus } from '@motor-vtt/contracts';
 
