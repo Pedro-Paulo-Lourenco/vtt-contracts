@@ -7,4 +7,5 @@ export * from './token.js';
 export * from './asset.js';
 export * from './sheet.js';
 export * from './message-log.js';
+export * from './dice-roll.js';
 export * from './api.js';

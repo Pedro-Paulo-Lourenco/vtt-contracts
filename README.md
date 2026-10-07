@@ -7,7 +7,7 @@ os dois lados da aplicação alinhados.
 ## O que este pacote oferece
 
 - Tipos para usuários, salas, participantes, tabuleiros, cenas, tokens, assets,
-  fichas e mensagens.
+  fichas, mensagens e resultados tipados de rolagens V1 do tabletop.
 - Enums com os valores permitidos pelos contratos compartilhados.
 - Schemas Zod para validação em tempo de execução.
 - Tipos derivados de schemas para cenários em que o payload validado também é
@@ -29,7 +29,7 @@ pertencem às aplicações que consomem os contratos.
 | Tabuleiros, cenas, grid e tokens | [Tabletop](docs/tabletop.md) |
 | Assets e visibilidade | [Assets](docs/assets.md) |
 | Templates e fichas de personagem | [Fichas](docs/sheets.md) |
-| Histórico de mensagens | [Mensagens](docs/messages.md) |
+| Mensagens, chat e rolagens V1 | [Mensagens](docs/messages.md) |
 | Enums e valores permitidos | [Enums](docs/enums.md) |
 | Validação e integração | [Validação](docs/validation.md) |
 

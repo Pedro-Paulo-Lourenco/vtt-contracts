@@ -7,6 +7,7 @@ export * from './types/token.js';
 export * from './types/asset.js';
 export * from './types/sheet.js';
 export * from './types/message-log.js';
+export * from './types/dice-roll.js';
 export * from './enums/user-status.js';
 export * from './enums/room-status.js';
 export * from './enums/participant-role.js';
