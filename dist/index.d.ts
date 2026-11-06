@@ -6,6 +6,8 @@ export * from './types/scene.js';
 export * from './types/token.js';
 export * from './types/asset.js';
 export * from './types/sheet.js';
+export * from './types/sheetEngine.js';
+export { templateFieldSchema as sheetEngineTemplateFieldSchema, sheetTemplateSchema as sheetEngineTemplateSchema, characterSheetDataSchema as sheetEngineCharacterSheetDataSchema, } from './validators/sheetValidator.js';
 export * from './types/message-log.js';
 export * from './types/dice-roll.js';
 export * from './enums/user-status.js';
