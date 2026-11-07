@@ -3,7 +3,7 @@ import type { SheetFieldType } from '../enums/sheet-field-type.js';
 
 export interface SheetTemplate {
   id: UUID;
-  usuarioId?: UUID | null;
+  usuarioId: UUID;
   salaId?: UUID | null;
   nome: string;
   sistema?: string | null;

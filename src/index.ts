@@ -22,3 +22,4 @@ export * from './enums/asset-visibility.js';
 export * from './enums/message-type.js';
 export * from './enums/sheet-field-type.js';
 export * from './schemas/index.js';
+export * from './services/formulaParser.js';

@@ -44,7 +44,7 @@ export declare const sheetFieldsSchema: z.ZodObject<{
 }, z.core.$strip>;
 export declare const sheetTemplateSchema: z.ZodObject<{
     id: z.ZodString;
-    usuarioId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
+    usuarioId: z.ZodString;
     salaId: z.ZodOptional<z.ZodNullable<z.ZodString>>;
     nome: z.ZodString;
     sistema: z.ZodOptional<z.ZodNullable<z.ZodString>>;

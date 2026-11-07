@@ -20,7 +20,7 @@ export const sheetFieldsSchema = z.object({
 
 export const sheetTemplateSchema = z.object({
   id: uuidSchema,
-  usuarioId: uuidSchema.nullable().optional(),
+  usuarioId: uuidSchema,
   salaId: uuidSchema.nullable().optional(),
   nome: z.string().trim().min(1).max(160),
   sistema: z.string().trim().max(80).nullable().optional(),
