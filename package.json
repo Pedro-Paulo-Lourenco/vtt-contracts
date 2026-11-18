@@ -1,6 +1,6 @@
 {
   "name": "@motor-vtt/contracts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Contratos compartilhados do Motor VTT Universal",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
